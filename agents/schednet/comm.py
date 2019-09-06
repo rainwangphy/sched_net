@@ -97,6 +97,7 @@ def encoder_network(e_input, out_dim, h_num, h_level, name="encoder", trainable=
                         use_bias=True, trainable=trainable, reuse=tf.AUTO_REUSE, name=name+"_out")
     return ret
 
+
 def decode_concat_network(m_input_list, schedule, capacity, out_dim):
 
     inp = tf.stack(m_input_list, axis=-2)
